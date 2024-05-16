@@ -1,2 +1,0 @@
-form{display:flex;flex-direction:column;gap:10px;justify-content:center;margin:0 auto;max-width:300px}input{height:25px}input,textarea{border-radius:5px}textarea{max-height:300px;resize:vertical}.task{border:1px solid #000;border-radius:5px;margin-bottom:10px;padding:5px 10px;width:100%}.btn{display:flex;justify-content:flex-end}.app{background-color:#f3e7f1;height:100vh;margin:0 auto;max-width:1024px;padding:10px}.content{display:flex;gap:10px;justify-content:space-between}.todo{width:65%}
-/*# sourceMappingURL=main.53142a89.css.map*/
