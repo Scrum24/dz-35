@@ -5,15 +5,16 @@
   padding: 10px;
 
   background-color: rgb(243, 231, 241);
-  height: 100vh;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 10px;
-}
 
-.todo {
   width: 65%;
 }

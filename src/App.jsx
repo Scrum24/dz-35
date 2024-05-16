@@ -30,13 +30,19 @@ function App() {
     setTodoList([...todoList]);
   }
 
+  function getTodoTasks() {
+    return todoList.filter((task) => task.isDone === false);
+  }
+
+  function getDoneTasks() {
+    return todoList.filter((task) => task.isDone === true);
+  }
+
   return (
     <div className="app">
-      <div className="header">
-        <h1>To-Do List</h1>
-      </div>
       <div className="content">
         <div className="todo">
+          <h3>To-Do List. All tasks</h3>
           <ToDoList
             tdList={todoList}
             updateIsDone={(id) => updateIsDone(id)}
@@ -44,9 +50,28 @@ function App() {
           />
         </div>
 
-        <div className="aside">
-          <Form onSubmit={(el) => addTask(el)} />
+        <div className="todo-tasks">
+          <h3>To-Do tasks</h3>
+          <ToDoList
+            tdList={getTodoTasks()}
+            updateIsDone={(id) => updateIsDone(id)}
+            deleteTask={(id) => deleteTask(id)}
+          />
         </div>
+
+        <div className="done-tasks">
+          <h3>Done tasks</h3>
+          <ToDoList
+            tdList={getDoneTasks()}
+            updateIsDone={(id) => updateIsDone(id)}
+            deleteTask={(id) => deleteTask(id)}
+          />
+        </div>
+      </div>
+
+      <div className="aside">
+        <h3>Add new task</h3>
+        <Form onSubmit={(el) => addTask(el)} />
       </div>
     </div>
   );

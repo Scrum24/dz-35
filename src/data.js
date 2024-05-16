@@ -18,6 +18,6 @@ export const tdList = [
     title: "Todo 3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, recusandae!",
-    isDone: false,
+    isDone: true,
   },
 ];
